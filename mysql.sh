@@ -16,6 +16,8 @@ then
 	OUTDIR=$1;
 fi
 
+cd $MYDIR
+
 if [ ! -e MYSQL_PWD ]
 then
 	echo "ERROR: Please create a 'MYSQL_PWD' file with MySQL backup user password!";
@@ -24,8 +26,6 @@ fi
 
 DATE=$(date +%Y%m%d%H%M);
 OUTDIR="$OUTDIR/$DATE";
-
-cd $MYDIR;
 
 MYSQL_USER=backup;
 MYSQL_PWD=`cat MYSQL_PWD`;
