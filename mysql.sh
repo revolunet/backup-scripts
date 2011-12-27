@@ -43,8 +43,7 @@ do
 	for TABLE in $TABLES
 	do
 		FILENAME=$OUTDIR"/"$DATABASE"__"$TABLE"__"$DATE".sql";
-		echo $FILENAME
-		#$MYSQLDUMP -h 127.0.0.1 -u $MYSQL_USER -p$MYSQL_PWD $DATABASE "$TABLE" > "$FILENAME";
+		$MYSQLDUMP -h 127.0.0.1 -u $MYSQL_USER -p$MYSQL_PWD $DATABASE "$TABLE" > "$FILENAME";
 		if [ -e "$FILENAME" ]
 		then
 			tar -czvf $FILENAME.tgz $FILENAME >& /dev/null;
