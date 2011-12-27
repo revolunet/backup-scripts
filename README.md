@@ -11,3 +11,7 @@ simple backup scripts.
      - add `mysql.sh` to your CRON to schedule MySQL backups. add a path argument if you want to backup in some special place
      - the whole MySQL databases and tables will be backed-up and gzipped in separated files
 
+ - Todo 
+ 
+     -  random password generation
+     -  backup stats + error alerts
